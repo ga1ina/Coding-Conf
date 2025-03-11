@@ -1,0 +1,72 @@
+/* .speakers_list__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.speakers__card {
+    width: 100px;
+    height: 100px;
+} */
+
+
+  
+  .speakers__card {
+    display: grid;
+    grid-template-columns: 4;
+    grid-template-rows: auto;
+    justify-content: stretch;
+    align-items: stretch;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 2px solid #111111;
+    }
+    h3 {
+        font-family: "museo";
+        font-size: 1.6rem;
+        color: #423176;
+        font-weight: 300;
+        line-height: 1.1;
+      }
+    p {
+        font-family: "leaguespartan";
+        font-size: 1.3rem;
+        color: #978eb3;
+        font-weight: 300;
+        line-height: 1.1;
+      }
+    span {
+        display: block;
+    }
+  }
+
+  .speakers__title::before {
+    content: "| ";
+    margin-right: 10px;
+  }
+
+  .speakers_list__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+    grid-template-rows: repeat(3, auto);   /* Creates 3 rows that adjust to content height */
+    gap: 20px;                            /* Adds spacing between grid items */
+  }
+
+  @media (max-width: 992px) {
+    .speakers_list__container {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .speakers_list__container {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .speakers_list__container {
+      grid-template-columns: 1fr; /* Single column on mobile */
+    }
+  }

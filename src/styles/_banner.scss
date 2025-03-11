@@ -1,0 +1,43 @@
+
+  
+  .banner__image {
+    height: 40vh;
+  }
+
+  .banner__title {
+      font-family: "museo";
+      font-size: 1.6rem;
+      color: #ffffff;
+      font-weight: 300;
+      line-height: 1.1;
+  }
+  
+  .banner__pictr{
+    background: linear-gradient(to right, #6a3de8, #8152e0);
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &::before, &::after {
+      width: 8rem;
+      inset-block: -.5rem auto ;
+      content: "";
+      height: 2rem;
+      position: absolute;
+      background: url("../images/elts/pattern-stripes-left.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      inset-inline: 0 auto;
+    }
+    &::after{
+      background: url("../images/elts/pattern-stripes-right.png");
+      inset-inline: auto 0;
+      background-position: top right;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    
+
+    }
+
+  }

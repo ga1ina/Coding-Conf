@@ -99,12 +99,58 @@
   content: "\e94f";
 }
 
+/* leaguespartan */
+@font-face {
+  font-family: "leaguespartan";
+  src: url("/dist/webfonts/leaguespartan/LeagueSpartanVariable.woff2") format("woff2"), url("/dist/webfonts/leaguespartan/LeagueSpartanVariable.ttf") format("ttf");
+  font-weight: 100 900;
+  font-variation-settings: "wght" 100, "wght" 900;
+  font-style: normal;
+}
 /* museo */
 @font-face {
   font-family: "museo";
   src: url("/dist/webfonts/museo/museo300.woff2") format("woff2"), url("/dist/webfonts/museo/museo300.woff") format("woff");
   font-weight: 400 900;
   font-variation-settings: "wght" 400, "wght" 900;
+  font-style: normal;
+}
+/* maven */
+@font-face {
+  font-family: "maven";
+  src: url("maven/maven400.woff2") format("woff2"), url("maven/maven400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+/* maven */
+@font-face {
+  font-family: "maven";
+  src: url("maven/maven500.woff2") format("woff2"), url("maven/maven500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "maven";
+  src: url("maven/maven600.woff2") format("woff2"), url("maven/maven600.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "maven";
+  src: url("maven/maven700.woff2") format("woff2"), url("maven/maven700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "maven";
+  src: url("maven/maven800.woff2") format("woff2"), url("maven/maven800.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "maven";
+  src: url("maven/maven900.woff2") format("woff2"), url("maven/maven900.woff") format("woff");
+  font-weight: 900;
   font-style: normal;
 }
 .navbar__list {
@@ -143,6 +189,112 @@
   margin-right: 16px;
 }
 
+/* .speakers_list__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+.speakers__card {
+    width: 100px;
+    height: 100px;
+} */
+.speakers__card {
+  display: grid;
+  grid-template-columns: 4;
+  grid-template-rows: auto;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+.speakers__card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid #111111;
+}
+.speakers__card h3 {
+  font-family: "museo";
+  font-size: 1.6rem;
+  color: #423176;
+  font-weight: 300;
+  line-height: 1.1;
+}
+.speakers__card p {
+  font-family: "leaguespartan";
+  font-size: 1.3rem;
+  color: #978eb3;
+  font-weight: 300;
+  line-height: 1.1;
+}
+.speakers__card span {
+  display: block;
+}
+
+.speakers__title::before {
+  content: "| ";
+  margin-right: 10px;
+}
+
+.speakers_list__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+  grid-template-rows: repeat(3, auto); /* Creates 3 rows that adjust to content height */
+  gap: 20px; /* Adds spacing between grid items */
+}
+
+@media (max-width: 992px) {
+  .speakers_list__container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+  }
+}
+@media (max-width: 768px) {
+  .speakers_list__container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+}
+@media (max-width: 480px) {
+  .speakers_list__container {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+}
+.banner__image {
+  height: 40vh;
+}
+
+.banner__pictr {
+  background: -webkit-gradient(linear, left top, right top, from(#6a3de8), to(#8152e0));
+  background: linear-gradient(to right, #6a3de8, #8152e0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.banner__pictr::before, .banner__pictr::after {
+  width: 8rem;
+  inset-block: -0.5rem auto;
+  content: "";
+  height: 2rem;
+  position: absolute;
+  background: url("../images/elts/pattern-stripes-left.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  inset-inline: 0 auto;
+}
+.banner__pictr::after {
+  background: url("../images/elts/pattern-stripes-right.png");
+  inset-inline: auto 0;
+  background-position: top right;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -157,13 +309,55 @@ a, li, ul {
   color: var(--text-color);
 }
 
-h1, h2, h3, h4 {
-  font-size: 1rem;
-  color: red;
+/* Base styles for all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Arial", sans-serif; /* Choose your preferred font */
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  color: #333333; /* Base color for all headings */
+  font-weight: 700;
 }
 
-.banner__pattern {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+/* Individual heading styles */
+h1 {
+  font-size: 2.5rem;
+  color: #2d2d2d;
+  /* For important headings like page titles */
+}
+
+h2 {
+  font-size: 2rem;
+  color: #404040;
+  /* For section headings */
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #505050;
+  /* For sub-section headings */
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #606060;
+  /* For smaller section titles */
+}
+
+h5 {
+  font-size: 1.25rem;
+  color: #707070;
+  /* For minor headings */
+}
+
+h6 {
+  font-size: 1rem;
+  color: #808080;
+  font-style: italic;
+  /* For the smallest headings */
+}
+
+p {
+  font-size: 1rem;
+  color: #606060;
 }/*# sourceMappingURL=styles.css.map */

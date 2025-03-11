@@ -5,11 +5,13 @@
 @import "header";
 @import "footer";
 @import "speaker";
+@import "banner";
 
 
 *, *::before, *::after {
     box-sizing: border-box 
   }
+
 
 body {
     font-family: 'maven', sans-serif;
@@ -20,12 +22,59 @@ a, li, ul {
     color: var(--text-color);
   }
 
-  h1, h2, h3, h4 {
-    font-size: 1rem;
-    color: red;
-  }
 
-.banner__pattern {
-    display: flex;
+
+/* Base styles for all headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif; /* Choose your preferred font */
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  color: #333333; /* Base color for all headings */
+  font-weight: 700;
 }
+
+/* Individual heading styles */
+h1 {
+  font-size: 2.5rem;
+  color: #2d2d2d;
+  /* For important headings like page titles */
+}
+
+h2 {
+  font-size: 2rem;
+  color: #404040;
+  /* For section headings */
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #505050;
+  /* For sub-section headings */
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: #606060;
+  /* For smaller section titles */
+}
+
+h5 {
+  font-size: 1.25rem;
+  color: #707070;
+  /* For minor headings */
+}
+
+h6 {
+  font-size: 1rem;
+  color: #808080;
+  font-style: italic;
+  /* For the smallest headings */
+}
+
+p {
+  font-size: 1rem;
+  color: #606060;
+}
+
 
