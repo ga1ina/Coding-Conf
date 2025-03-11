@@ -1,0 +1,29 @@
+.navbar__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #888;
+    list-style-type: none;
+  }
+
+  //.main_header {
+   // display: flex;
+    //justify-content: space-between;
+   // border: 1px solid #888;
+ // }
+
+.main_header {
+    display: flex;
+    border: 1px solid #888;
+    list-style-type: none;
+    list-style-type: none;
+    background: var(--brand-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+.navbar__item {
+    margin-left: 16px;
+    margin-right: 16px;
+    }
