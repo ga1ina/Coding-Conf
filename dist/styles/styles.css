@@ -111,47 +111,29 @@
 @font-face {
   font-family: "museo";
   src: url("/dist/webfonts/museo/museo300.woff2") format("woff2"), url("/dist/webfonts/museo/museo300.woff") format("woff");
-  font-weight: 400 900;
-  font-variation-settings: "wght" 400, "wght" 900;
+  font-weight: 300;
   font-style: normal;
 }
-/* maven */
 @font-face {
-  font-family: "maven";
-  src: url("maven/maven400.woff2") format("woff2"), url("maven/maven400.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-/* maven */
-@font-face {
-  font-family: "maven";
-  src: url("maven/maven500.woff2") format("woff2"), url("maven/maven500.woff") format("woff");
+  font-family: "museo";
+  src: url("/dist/webfonts/museo/museo500.woff2") format("woff2"), url("/dist/webfonts/museo/museo500.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "maven";
-  src: url("maven/maven600.woff2") format("woff2"), url("maven/maven600.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
-  font-family: "maven";
-  src: url("maven/maven700.woff2") format("woff2"), url("maven/maven700.woff") format("woff");
+  font-family: "museo";
+  src: url("/dist/webfonts/museo/museo700.woff2") format("woff2"), url("/dist/webfonts/museo/museo700.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
+/* maven */
 @font-face {
   font-family: "maven";
-  src: url("maven/maven800.woff2") format("woff2"), url("maven/maven800.woff") format("woff");
-  font-weight: 800;
+  src: url("/dist/webfonts/maven_Pro/MavenPro-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 900;
+  font-variation-settings: "wght" 400, "wght" 900;
   font-style: normal;
-}
-@font-face {
-  font-family: "maven";
-  src: url("maven/maven900.woff2") format("woff2"), url("maven/maven900.woff") format("woff");
-  font-weight: 900;
-  font-style: normal;
+  font-optical-sizing: auto;
 }
 .navbar__list {
   display: -webkit-box;
@@ -163,7 +145,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #888;
   list-style-type: none;
 }
 
@@ -171,10 +152,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid #888;
   list-style-type: none;
-  list-style-type: none;
-  background: var(--brand-color);
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -187,11 +165,21 @@
 .navbar__item {
   margin-left: 16px;
   margin-right: 16px;
+  font-size: 1.2rem;
+}
+.navbar__item span {
+  margin-right: 8px;
+}
+
+.icon-heart_line {
+  font-size: 20px;
+  size: var(e900, 1rem);
+  color: orange;
 }
 
 .speakers__title {
   font-family: "museo";
-  font-size: 1.6rem;
+  font-size: 0.9rem;
   color: #423176;
   font-weight: 300;
   line-height: 1.1;
@@ -199,26 +187,26 @@
 
 .speakers__title::before {
   content: "| ";
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .speakers__card {
   display: grid;
   grid-template-columns: 4;
   grid-template-rows: auto;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 0;
 }
 .speakers__card img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border: 2px solid #111111;
 }
 .speakers__card h3 {
   font-family: "museo";
@@ -226,13 +214,18 @@
   color: #423176;
   font-weight: 300;
   line-height: 1.1;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 0;
 }
 .speakers__card p {
   font-family: "leaguespartan";
   font-size: 1.3rem;
   color: #978eb3;
   font-weight: 300;
-  line-height: 1.1;
+  line-height: 1.3;
+  margin: 0;
+  margin-left: 20px;
 }
 .speakers__card span {
   display: block;
@@ -266,10 +259,18 @@
 
 .banner__title {
   font-family: "museo";
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   color: #ffffff;
-  font-weight: 300;
-  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.banner__text {
+  margin-block: 0 2rem;
+  color: #ffffff;
+  font-family: "maven";
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .banner__pictr {
@@ -302,6 +303,28 @@
   background-repeat: no-repeat;
 }
 
+.speakersform__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.speakersform__form_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -318,7 +341,6 @@ a, li, ul {
 
 /* Base styles for all headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Arial", sans-serif; /* Choose your preferred font */
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   line-height: 1.2;
@@ -328,6 +350,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Individual heading styles */
 h1 {
+  font-family: "museo";
   font-size: 2.5rem;
   color: #2d2d2d;
   /* For important headings like page titles */

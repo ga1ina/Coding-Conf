@@ -6,10 +6,19 @@
 
   .banner__title {
       font-family: "museo";
-      font-size: 1.6rem;
+      font-size: 2.5rem;
       color: #ffffff;
-      font-weight: 300;
-      line-height: 1.1;
+      font-weight: 700;
+      margin-bottom: 0;
+  }
+
+  .banner__text {
+      margin-block: 0 2rem;
+      color: #ffffff;
+      font-family: "maven";
+      font-size: 1rem;
+      font-weight: 400;
+
   }
   
   .banner__pictr{

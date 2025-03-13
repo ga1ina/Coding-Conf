@@ -6,6 +6,7 @@
 @import "footer";
 @import "speaker";
 @import "banner";
+@import "form";
 
 
 *, *::before, *::after {
@@ -26,7 +27,7 @@ a, li, ul {
 
 /* Base styles for all headings */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Arial', sans-serif; /* Choose your preferred font */
+ // font-family: 'Arial', sans-serif; /* Choose your preferred font */
   margin-top: 1.5em;
   margin-bottom: 0.5em;
   line-height: 1.2;
@@ -36,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Individual heading styles */
 h1 {
+  font-family: "museo";
   font-size: 2.5rem;
   color: #2d2d2d;
   /* For important headings like page titles */
