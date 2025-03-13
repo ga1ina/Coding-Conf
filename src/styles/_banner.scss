@@ -12,17 +12,18 @@
       margin-bottom: 0;
   }
 
-  .banner__text {
+  .banner__description {
       margin-block: 0 2rem;
       color: #ffffff;
       font-family: "maven";
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: 400;
 
   }
   
   .banner__pictr{
-    background: linear-gradient(to right, #6a3de8, #8152e0);
+    justify-content: center;
+    background: linear-gradient(to top,#8152e0, #6a3de8);
     display: flex;
     align-items: center;
     position: relative;
@@ -45,6 +46,14 @@
       background-size: 100%;
       background-repeat: no-repeat;
     }
-    
 
+    
+    }
+
+  .background-image {
+      margin-top: -4rem;
+      align-self: end;
+      picture {
+        width:100%;
+      } 
     }

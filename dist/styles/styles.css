@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 @font-face {
   font-family: "codeconf";
   src: url("/dist/webfonts/codeconf-all/fonts/codeconf.woff") format("woff");
@@ -171,10 +176,14 @@
   margin-right: 8px;
 }
 
+.icon-schedule {
+  color: #423176;
+}
+
 .icon-heart_line {
   font-size: 20px;
   size: var(e900, 1rem);
-  color: orange;
+  color: #FF0200;
 }
 
 .speakers__title {
@@ -185,9 +194,16 @@
   line-height: 1.1;
 }
 
-.speakers__title::before {
+.icon-home {
+  color: #FF0200;
+  font-size: 20px;
+}
+
+.icon-home::after {
   content: "| ";
+  color: #423176;
   margin-right: 8px;
+  margin-left: 8px;
 }
 
 .speakers__card {
@@ -265,17 +281,20 @@
   margin-bottom: 0;
 }
 
-.banner__text {
+.banner__description {
   margin-block: 0 2rem;
   color: #ffffff;
   font-family: "maven";
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
 .banner__pictr {
-  background: -webkit-gradient(linear, left top, right top, from(#6a3de8), to(#8152e0));
-  background: linear-gradient(to right, #6a3de8, #8152e0);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(#8152e0), to(#6a3de8));
+  background: linear-gradient(to top, #8152e0, #6a3de8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,28 +322,69 @@
   background-repeat: no-repeat;
 }
 
-.speakersform__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+.background-image {
+  margin-top: -4rem;
+  -ms-flex-item-align: end;
+      align-self: end;
+}
+.background-image picture {
+  width: 100%;
+}
+
+.speakersform {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 20px;
+}
+
+.speakersform__texts {
+  grid-column: 1/13; /* Spans from column 1 to column 12 */
+  grid-row: 1/2; /* Spans from row 1 to row 2 */
+  text-align: center;
+}
+
+.speakersform__form_topleft {
+  grid-column: 2/7; /* Spans from column 2 to column 6 */
+  grid-row: 2/3; /* Spans from row 2 to row 3 */
+}
+
+.speakersform__form_topright {
+  grid-column: 7/13; /* Spans from column 7 to column 12 */
+  grid-row: 2/3; /* Spans from row 2 to row 3 */
 }
 
 .speakersform__form_bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  grid-column: 2/13; /* Spans from column 2 to column 12 */
+  grid-row: 3/4; /* Spans from row 3 to row 4 */
 }
 
+.speakersform__texts_info {
+  font-size: 1.5rem;
+}
+
+.speakersform__texts_info span {
+  display: block;
+}
+
+/* @media (max-width: 992px) {
+   .speakersform {
+     grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+/*  }
+}
+
+@media (max-width: 768px) {
+  .speakersform {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+/* }
+}
+
+@media (max-width: 480px) {
+  .speakersform {
+    grid-template-columns: repeat(1, 1fr); /* Single column on mobile */
+/* }
+  }
+*/
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -357,14 +417,17 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
-  color: #404040;
+  font-size: 1.9rem;
+  color: #814FFA;
+  text-transform: uppercase;
   /* For section headings */
 }
 
 h3 {
+  font-family: "museo";
   font-size: 1.75rem;
-  color: #505050;
+  color: #1c1c1c;
+  font-weight: 300;
   /* For sub-section headings */
 }
 
