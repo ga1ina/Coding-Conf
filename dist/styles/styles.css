@@ -189,15 +189,19 @@
   margin-right: 16px;
 }
 
-/* .speakers_list__row {
-    display: flex;
-    justify-content: space-between;
-  }
+.speakers__title {
+  font-family: "museo";
+  font-size: 1.6rem;
+  color: #423176;
+  font-weight: 300;
+  line-height: 1.1;
+}
 
-.speakers__card {
-    width: 100px;
-    height: 100px;
-} */
+.speakers__title::before {
+  content: "| ";
+  margin-right: 10px;
+}
+
 .speakers__card {
   display: grid;
   grid-template-columns: 4;
@@ -234,11 +238,6 @@
   display: block;
 }
 
-.speakers__title::before {
-  content: "| ";
-  margin-right: 10px;
-}
-
 .speakers_list__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
@@ -263,6 +262,14 @@
 }
 .banner__image {
   height: 40vh;
+}
+
+.banner__title {
+  font-family: "museo";
+  font-size: 1.6rem;
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 1.1;
 }
 
 .banner__pictr {
